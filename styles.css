@@ -1,9 +1,11 @@
+/* --- Reset --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- Page layout --- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* --- Cards layout --- */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +26,7 @@ body {
     align-items: flex-start;
 }
 
+/* Single pricing card (fixed width, flex column) */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +38,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header area: title + price + content */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* --- Card typography & price --- */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +53,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price line: amount + optional period (e.g. /mo.) */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,16 +72,19 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* --- Card content (includes + feature list) --- */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" / "Everything in Hobby, plus:" label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Bullet list of plan features (no list markers) */
 .features-list {
     list-style: none;
     padding: 0;
@@ -88,6 +98,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon (✓) before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +106,8 @@ body {
     font-weight: 400;
 }
 
+/* --- Buttons --- */
+/* Base = secondary style (light). Primary uses .download-button.primary */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +130,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant (e.g. Get Pro): dark background */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +144,8 @@ body {
     background-color: #333;
 }
 
+/* --- Page label (version badge) --- */
+/* Fixed at top center; for dev/demo only */
 .page-label {
     position: fixed;
     top: 16px;
